@@ -27,3 +27,8 @@ a:hover {
 .list-number {
   border-bottom: 1px black solid;
 }
+
+.phonebook-icon {
+  width: 40px;
+  rotate: -10deg;
+}
