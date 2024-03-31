@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Col, Container, Row } from "react-bootstrap";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import RegisterForm from "./component/RegisterForm";
+
+//1. There are register form on the left side and contact list and search bar on the right side.
+//2. A user can resister to phone book with name and phone number.
+//3. Showing the number of contacts above the contacts
+//4. A user can search contact with name
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="title">Phone book</h1>
+      <Container className="d-flex">
+        <Row>
+          <Col>
+            <RegisterForm />
+          </Col>
+          <Col></Col>
+        </Row>
+      </Container>
     </div>
   );
 }
