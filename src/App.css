@@ -10,7 +10,9 @@
 
 .register-btn,
 .name-input,
-.contact-input {
+.contact-input,
+.list-number,
+.search-bar {
   font-weight: bold;
 }
 
@@ -18,6 +20,10 @@ a:hover {
   cursor: pointer;
 }
 
-.search-bar {
+.search-input {
   display: flex;
+}
+
+.list-number {
+  border-bottom: 1px black solid;
 }

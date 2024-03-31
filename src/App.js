@@ -12,9 +12,9 @@ import ContactList from "./component/ContactList";
 function App() {
   return (
     <div className="App">
-      <h1 className="title">Phone book</h1>
+      <h1 className="title mt-5">Phone book</h1>
       <Container>
-        <Row>
+        <Row className="gap-4 mt-5">
           <Col>
             <RegisterForm />
           </Col>

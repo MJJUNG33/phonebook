@@ -4,17 +4,21 @@ import { Form, Button } from "react-bootstrap";
 const SearchBar = () => {
   return (
     <div>
-      <Form lg={10} className="search-bar">
+      <Form lg={8} className="search-bar">
         {" "}
-        <Form.Control
-          type="search"
-          placeholder="Name"
-          className="me-2"
-          aria-label="Search"
-        />
-        <Button lg={2} variant="primary">
-          Search
-        </Button>
+        <Form.Label>Contact list</Form.Label>
+        <Form.Group className="search-input">
+          {" "}
+          <Form.Control
+            type="search"
+            placeholder="Enter name for search"
+            className="me-2"
+            aria-label="Search"
+          />
+          <Button lg={4} variant="primary">
+            Search
+          </Button>
+        </Form.Group>
       </Form>
     </div>
   );
