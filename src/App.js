@@ -2,6 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import RegisterForm from "./component/RegisterForm";
+import ContactList from "./component/ContactList";
 
 //1. There are register form on the left side and contact list and search bar on the right side.
 //2. A user can resister to phone book with name and phone number.
@@ -12,12 +13,14 @@ function App() {
   return (
     <div className="App">
       <h1 className="title">Phone book</h1>
-      <Container className="d-flex">
+      <Container>
         <Row>
           <Col>
             <RegisterForm />
           </Col>
-          <Col></Col>
+          <Col>
+            <ContactList />
+          </Col>
         </Row>
       </Container>
     </div>

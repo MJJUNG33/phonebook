@@ -2,11 +2,11 @@
   text-align: center;
 }
 
-/* .register-form {
+.register-form {
   display: flex;
   flex-direction: column;
   align-content: start;
-} */
+}
 
 .register-btn,
 .name-input,
@@ -16,4 +16,8 @@
 
 a:hover {
   cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
 }
