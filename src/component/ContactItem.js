@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 
-const ContactItem = () => {
+const ContactItem = ({ item }) => {
   return (
     <Row className="mt-2 mb-3">
       <Col lg={3}>
@@ -12,8 +12,8 @@ const ContactItem = () => {
         />
       </Col>
       <Col lg={9}>
-        <Row className="mb-3">name</Row>
-        <Row>number</Row>
+        <Row className="mb-3">{item.name}</Row>
+        <Row>{item.phoneNumber}</Row>
       </Col>
     </Row>
   );

@@ -1,13 +1,23 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import { useDispatch } from "react-redux";
 
 const RegisterForm = () => {
   const [name, setName] = useState();
-  const [number, setNumber] = useState();
+  const [phoneNumber, setPhoneNumber] = useState();
+  const dispatch = useDispatch();
+
+  const addContact = (event) => {
+    event.preventDefault();
+    dispatch({
+      type: "ADD_CONTACT",
+      payload: { name, phoneNumber },
+    });
+  };
 
   return (
     <div>
-      <Form className="register-form">
+      <Form className="register-form" onSubmit={addContact}>
         <Form.Group className="mb-3" controlId="formName">
           <Form.Label className="name-input">Name</Form.Label>
           <Form.Control
@@ -22,7 +32,7 @@ const RegisterForm = () => {
           <Form.Control
             type="tel"
             placeholder="Enter your phone number"
-            onChange={(event) => setNumber(event.target.value)}
+            onChange={(event) => setPhoneNumber(event.target.value)}
           />
         </Form.Group>
 
