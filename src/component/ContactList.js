@@ -11,7 +11,9 @@ const ContactList = () => {
   return (
     <div>
       <SearchBar />
-      <p className="mt-5 list-number">Result:</p>
+      <p className="mt-5 list-number">
+        Result:{searchContact ? searchContact.length : contactList.length}
+      </p>
       {searchContact
         ? searchContact.map((item, key) => (
             <ContactItem item={item} key={key} />
